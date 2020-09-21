@@ -6,6 +6,7 @@ const Banner = ({ title }) => (
   <Text style={styles.bannerStyle}>{ title || '[loading...]' }</Text>
 );
 
+
 const App = () => {
   const [schedule, setSchedule] = useState({ title: '', courses: [] });
   
