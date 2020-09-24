@@ -3,7 +3,7 @@ import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } fr
 import Course from './Course';
 import { getCourseNumber, getCourseTerm, hasConflict, terms } from '../utils/course'
 
-const CourseSelector = ({courses}) => {
+const CourseSelector = ({courses, view}) => {
   const [selected, setSelected] = useState([]);
 
   const toggle = course => setSelected(selected => (
@@ -18,6 +18,7 @@ const CourseSelector = ({courses}) => {
             isDisabled={hasConflict(course, selected)}
             isSelected={selected.includes(course)}
             select={toggle}
+            view={view}
           />
         ))
       }
